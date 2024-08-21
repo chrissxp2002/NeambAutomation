@@ -38,6 +38,8 @@ test('NEA_Registration', async ({ page }) => {
     await registrationPage.duplicateRegistrationApplyBtn.click();
     await expect(registrationPage.duplicateRegistrationThankYouMessage).toBeVisible();
 
+    //cp3 change
+
 
     });
 
