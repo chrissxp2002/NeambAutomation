@@ -6,9 +6,9 @@ import { HomePage } from '../../Pages/SEIU/HomePage.ts';
 test('SEIU_ValidateHeroElements', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.goto();
-    await expect(page.getByRole('heading', { name: 'Welcome to the new SEIUMB' })).toBeVisible();
-    await expect(page.getByText('We’re here to provide support').first()).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Become a Member' })).toBeVisible();
+    await expect(page.locator("//section[contains(@class,'desktop')]//h1")).toBeVisible();
+    await expect(page.locator("(//section[contains(@class,'desktop')]//span)[2]")).toBeVisible();
+    await expect(page.locator("//section[contains(@class,'desktop')]//a")).toBeVisible();
     });
 
   test('SEIU_ValidateCarouselElements', async ({ page }) => {

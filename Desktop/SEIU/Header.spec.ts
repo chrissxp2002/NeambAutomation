@@ -36,7 +36,7 @@ test('SEIU_SearchResults', async ({ page }) => {
   await homePage.searchTextBox.click();
   await homePage.searchTextBox.fill('nea personal loan');
   await homePage.magnifierIconSearch.click();
-  await expect(page.getByText('Benefit444', { exact: true }).first(),"Benefit tezt not found").toBeVisible();
+  await expect(page.getByText('Benefit', { exact: true }).first(),"Benefit tezt not found").toBeVisible();
   await expect(page.getByRole('img', { name: 'Couple sitting in kitchen' })).toBeVisible();
   await expect(page.locator('p').filter({ hasText: /^SEIU Personal Loan$/ })).toBeVisible();
   await expect(page.getByText('Consolidate higher-interest').first()).toBeVisible();

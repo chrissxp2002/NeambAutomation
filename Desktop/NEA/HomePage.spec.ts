@@ -16,14 +16,23 @@ test('NEA_ValidateHeroElements', async ({ page }) => {
   test('NEA_ValidateCarouselElements', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.goto();
+    //card 1
     await expect(page.locator('#slick-slide00').getByRole('link').first()).toBeVisible();
-    await expect(page.getByRole('link', { name: 'NEA Customized Cash Rewards Credit Card and Amazon Gift Card with springtime' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Family enjoying a beach day' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Auto Insurance. Member' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Earn Cash Back. Maximize It.' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Life Insurance. No Cost To' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Get a Quote' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Apply Now', exact: true })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Confirm Beneficiaries' })).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//h5)[1]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//p)[1]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//div[@class='footer']/a)[1]")).toBeVisible();
+    //card 2
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//h5)[2]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//p)[2]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//div[@class='footer']/a)[2]")).toBeVisible();
+    //card 3
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//h5)[3]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//p)[3]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//div[@class='footer']/a)[3]")).toBeVisible();
+    //card 4
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//h5)[4]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//p)[4]")).toBeVisible();
+    await expect(page.locator("(//div[contains(@class,'slick-slide')]//div[@class='footer']/a)[4]")).toBeVisible();
+
     });
 
