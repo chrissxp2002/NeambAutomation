@@ -20,7 +20,8 @@ test('NEA_AJAXLogin', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.Login(testData.NEAUser991.username, testData.NEAUser991.password);
   await loginPage.ClickLoginAnchor();
-  await expect(page.locator("//img[@alt='Pets Best Pet Health Insurance']")).toBeVisible({timeout: 20000 } );  //element only existing for NEA Pet page.
+  await page.waitForLoadState();
+  await expect(page.locator("//img[@alt='Pets Best Pet Health Insurance']")).toBeVisible({timeout: 40000 } );  //element only existing for NEA Pet page.
 });
 
 

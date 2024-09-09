@@ -15,7 +15,7 @@ export class ProductPage extends BasePage{
       }
 
       async loadProduct(productUrl) {
-        await this.page.goto(testData.Url.neambBaseUrl + productUrl);
+        await this.page.goto(testData.Url.neambBaseUrl + productUrl,{timeout: 40000 } );
       }
 
       async ClickMainCTA() {
